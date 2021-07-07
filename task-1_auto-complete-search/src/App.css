@@ -1,0 +1,26 @@
+body {
+  display: flex;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #E0E0E0;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.search {
+  display: flex;
+  width: 25em;
+  height: fit-content;
+  margin-top: 45vh;
+}
