@@ -1,0 +1,55 @@
+.signin-container {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  max-width: 20em;
+
+  font-family: Montserrat;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+
+  border: none;
+  padding: 1em;
+
+  background: #e0e0e0;
+  border-radius: 30px;
+  box-shadow: 20px 20px 41px #cacaca, -20px -20px 41px #f6f6f6;
+}
+
+.signin-input {
+  outline: none;
+  border: none;
+
+  font-family: Montserrat;
+  font-size: larger;
+  text-align: center;
+
+  box-sizing: border-box;
+  padding: .5rem;
+  margin: 1rem;
+  width: calc(100% - 2rem);
+
+  background: #e0e0e0;
+  border-radius: 18px;
+  box-shadow: inset 5px 5px 12px #bebebe, inset -5px -5px 12px #ffffff;
+
+}
+
+
+.signin-button {
+  border: none;
+  outline: none;
+
+  font-family: Montserrat;
+  font-size: medium;
+
+  box-sizing: border-box;
+  padding: .5rem;
+  margin: 1rem;
+  width: calc(100% - 2rem);
+
+  background: #e0e0e0;
+  border-radius: 18px;
+  box-shadow: 8px 8px 15px #cacaca, -8px -8px 15px #f6f6f6;
+}
