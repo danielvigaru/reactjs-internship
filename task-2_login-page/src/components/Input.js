@@ -11,6 +11,17 @@ export const Input = (props) => {
       : setValidText("Please enter 3 or more characters");
   }, [inputValid]);
 
+  const onTextChange = (e, setValueCb, setValidCb) => {
+    const text = e.target.value;
+    setValueCb(text);
+
+    if (text.length >= 3 || text.length === 0) {
+      setValidCb(true);
+    } else {
+      setValidCb(false);
+    }
+  };
+
   return (
     <>
       <FormControl
@@ -23,15 +34,4 @@ export const Input = (props) => {
       {validText}
     </>
   );
-};
-
-const onTextChange = (e, setValueCb, setValidCb) => {
-  const text = e.target.value;
-  setValueCb(text);
-
-  if (text.length >= 3 || text.length === 0) {
-    setValidCb(true);
-  } else {
-    setValidCb(false);
-  }
 };

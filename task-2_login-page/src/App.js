@@ -1,18 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./css/App.css";
-import { Input } from "./Input";
-import { Submit } from "./Submit";
+import { Input } from "./components/Input";
+import { Submit } from "./components/Submit";
+import userArray from "./user-informations.json";
 
 export const App = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [userArray, setUserArray] = useState([]);
-
-  useEffect(() => {
-    fetch("user-informations.json")
-      .then((resp) => resp.json())
-      .then((data) => setUserArray(data));
-  }, []);
 
   return (
     <div className='signin-container'>

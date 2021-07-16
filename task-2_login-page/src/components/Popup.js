@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Lottie from "react-lottie";
-import checkAnimationData from "./lotties/checkmark.json";
-import xAnimationData from "./lotties/xmark.json";
+import checkAnimationData from "../lotties/checkmark.json";
+import xAnimationData from "../lotties/xmark.json";
 import Alert from "react-bootstrap/Alert";
 
 export const Popup = (props) => {

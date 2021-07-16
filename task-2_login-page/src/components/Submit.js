@@ -18,24 +18,6 @@ export const Submit = (props) => {
 
   return (
     <div>
-      {/* <button
-        type='button'
-        className={props.clss}
-        onClick={() => {
-          verifyUser(
-            props.userArray,
-            props.username,
-            props.password,
-            setValidUser,
-            setLoginMessage
-          );
-          setDidClick(true);
-        }}
-        disabled={buttonDisabled ? true : ""}
-      >
-        sign in
-      </button> */}
-
       <Button
         type='submit'
         bsPrefix={props.clss}
