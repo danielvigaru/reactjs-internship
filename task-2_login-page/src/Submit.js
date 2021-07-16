@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Popup } from "./Popup";
+import Button from "react-bootstrap/Button";
 
 export const Submit = (props) => {
   const [validUser, setValidUser] = useState(false);
@@ -17,7 +18,7 @@ export const Submit = (props) => {
 
   return (
     <div>
-      <button
+      {/* <button
         type='button'
         className={props.clss}
         onClick={() => {
@@ -33,10 +34,30 @@ export const Submit = (props) => {
         disabled={buttonDisabled ? true : ""}
       >
         sign in
-      </button>
+      </button> */}
+
+      <Button
+        type='submit'
+        bsPrefix={props.clss}
+        onClick={() => {
+          verifyUser(
+            props.userArray,
+            props.username,
+            props.password,
+            setValidUser,
+            setLoginMessage
+          );
+          setDidClick(true);
+        }}
+        disabled={buttonDisabled ? true : ""}
+      >
+        sign in
+      </Button>
+
       <Popup
         validUser={validUser}
         didClick={didClick}
+        setDidClick={setDidClick}
         loginMessage={loginMessage}
       />
     </div>

@@ -1,8 +1,7 @@
 .signin-container {
   display: flex;
   flex-direction: column;
-  width: 80vw;
-  max-width: 20em;
+  width: min(20em, 80vw);
 
   font-family: Montserrat;
   text-align: center;
@@ -36,13 +35,13 @@
 
 }
 
-
 .signin-button {
   border: none;
   outline: none;
 
   font-family: Montserrat;
   font-size: medium;
+  color: black;
 
   box-sizing: border-box;
   padding: .5rem;
@@ -52,4 +51,21 @@
   background: #e0e0e0;
   border-radius: 18px;
   box-shadow: 8px 8px 15px #cacaca, -8px -8px 15px #f6f6f6;
+}
+
+#alert-custom-override {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: .5rem;
+  margin: 1rem;
+  border-radius: 20px;
+
+  box-shadow: 8px 8px 15px #cacaca, -8px -8px 15px #f6f6f6;
+}
+
+[role='button'] {
+  margin: .5em !important;
 }

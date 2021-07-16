@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import FormControl from "react-bootstrap/FormControl";
 
 export const Input = (props) => {
   const [inputValid, setInputValid] = useState(true);
@@ -11,16 +12,16 @@ export const Input = (props) => {
   }, [inputValid]);
 
   return (
-    <div>
-      <input
-        className={props.clss}
+    <>
+      <FormControl
+        bsPrefix={props.clss}
         placeholder={props.placeholder}
         type={props.type}
         value={props.input}
         onChange={(e) => onTextChange(e, props.setInput, setInputValid)}
       />
       {validText}
-    </div>
+    </>
   );
 };
 
