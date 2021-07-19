@@ -30,7 +30,7 @@ export const Popup = (props) => {
       setShow(true);
     }
     props.setDidClick(false);
-  });
+  }, [props]);
 
   return (
     <div>
