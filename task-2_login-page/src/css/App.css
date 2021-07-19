@@ -3,7 +3,7 @@
   flex-direction: column;
   width: min(20em, 80vw);
 
-  font-family: Montserrat;
+  font-family: 'Montserrat Alternates', sans-serif;
   text-align: center;
   justify-content: center;
   align-content: center;
@@ -20,7 +20,7 @@
   outline: none;
   border: none;
 
-  font-family: Montserrat;
+  font-family: 'Montserrat Alternates', sans-serif;
   font-size: larger;
   text-align: center;
 
@@ -39,7 +39,7 @@
   border: none;
   outline: none;
 
-  font-family: Montserrat;
+  font-family: 'Montserrat Alternates', sans-serif;
   font-size: medium;
   color: black;
 

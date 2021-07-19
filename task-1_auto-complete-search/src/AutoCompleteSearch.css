@@ -11,7 +11,7 @@
 
 .AutoCompleteSearch input {
   display: flex;
-  font-family: Montserrat;
+  font-family: 'Montserrat Alternates', sans-serif;
   font-size: 1rem;
   font-weight: 400;
   width: 100%;
@@ -26,7 +26,7 @@
 }
 
 .AutoCompleteSearch ul {
-  font-family: Montserrat;
+  font-family: 'Montserrat Alternates', sans-serif;
   font-size: 1rem;
   font-weight: 300;
   list-style-type: none;
