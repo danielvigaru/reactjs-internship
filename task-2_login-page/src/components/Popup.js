@@ -4,7 +4,7 @@ import checkAnimationData from "../lotties/checkmark.json";
 import xAnimationData from "../lotties/xmark.json";
 import Alert from "react-bootstrap/Alert";
 
-export const Popup = (props) => {
+export const Popup = ({ validUser, didClick, setDidClick, loginMessage }) => {
   const [show, setShow] = useState(false);
   const [variant, setVariant] = useState("");
   const [animationData, setAnimationData] = useState();
@@ -19,8 +19,8 @@ export const Popup = (props) => {
   };
 
   useEffect(() => {
-    if (props.didClick) {
-      if (props.validUser) {
+    if (didClick) {
+      if (validUser) {
         setVariant("success");
         setAnimationData(checkAnimationData);
       } else {
@@ -29,21 +29,19 @@ export const Popup = (props) => {
       }
       setShow(true);
     }
-    props.setDidClick(false);
-  }, [props]);
+    setDidClick(false);
+  }, [didClick, validUser, setDidClick]);
 
   return (
-    <div>
-      <Alert
-        show={show}
-        onClose={() => setShow(false)}
-        variant={variant}
-        transition={true}
-        id='alert-custom-override'
-        // dismissible // i cannot style the close button correctly for some reason so it's disabled for now
-      >
-        <Lottie options={options} height={30} width={30} /> {props.loginMessage}
-      </Alert>
-    </div>
+    <Alert
+      show={show}
+      onClose={() => setShow(false)}
+      variant={variant}
+      transition={true}
+      id='alert-custom-override'
+      // dismissible // i cannot style the close button correctly for some reason so it's disabled for now
+    >
+      <Lottie options={options} height={30} width={30} /> {loginMessage}
+    </Alert>
   );
 };

@@ -1,4 +1,4 @@
-.AutoCompleteSearch {
+.auto-complete-search {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -9,11 +9,9 @@
   color: black;
 }
 
-.AutoCompleteSearch input {
+.auto-complete-search input {
   display: flex;
-  font-family: 'Montserrat Alternates', sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
+  font: 400 1rem 'Montserrat Alternates', sans-serif;
   width: 100%;
   box-sizing: border-box;
   padding: 1rem;
@@ -25,10 +23,8 @@
   outline: none;
 }
 
-.AutoCompleteSearch ul {
-  font-family: 'Montserrat Alternates', sans-serif;
-  font-size: 1rem;
-  font-weight: 300;
+.auto-complete-search ul {
+  font: 300 1rem 'Montserrat Alternates', sans-serif;
   list-style-type: none;
   text-align: left;
   padding: .5rem 0 .5rem 1rem;
@@ -39,11 +35,11 @@
   overflow-y: scroll;
 }
 
-.AutoCompleteSearch ul:empty {
+.auto-complete-search ul:empty {
   display: none;
 }
 
-.AutoCompleteSearch li {
+.auto-complete-search li {
   padding: .5rem 0 .5rem 0;
   cursor: pointer;
   text-decoration: underline;
@@ -51,6 +47,6 @@
   transition: text-decoration-color .3s;
 }
 
-.AutoCompleteSearch li:hover {
+.auto-complete-search li:hover {
   text-decoration-color: black;
 }

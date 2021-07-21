@@ -5,7 +5,7 @@ export default class AutoCompleteSearch extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      input: "",
+      inputTextCountry: "",
       countries: null,
       suggestions: null,
     };
@@ -17,8 +17,8 @@ export default class AutoCompleteSearch extends React.Component {
       .then((data) => this.setState({ countries: data }));
   }
 
-  onTextChanged = (e) => {
-    const text = e.target.value;
+  onTextChanged = (event) => {
+    const text = event.target.value;
     let suggestions = [];
 
     if (text.length > 0) {
@@ -30,36 +30,39 @@ export default class AutoCompleteSearch extends React.Component {
       suggestions = null;
     }
 
-    this.setState({ suggestions: suggestions, input: text });
+    this.setState({ suggestions: suggestions, inputTextCountry: text });
   };
 
   suggestionSelected(value) {
     this.setState({
-      input: value,
+      inputTextCountry: value,
       suggestions: null,
     });
   }
 
+  createSuggestionsListElements = (suggestions) => {
+    return suggestions?.map((country, index) => (
+      <li
+        key={index}
+        onClick={() => {
+          this.suggestionSelected(country.name);
+        }}
+      >
+        {country.name}
+      </li>
+    ));
+  };
+
   render() {
     return (
-      <div className='AutoCompleteSearch'>
+      <div className='auto-complete-search'>
         <input
-          value={this.state.input}
+          value={this.state.inputTextCountry}
           onChange={this.onTextChanged}
           placeholder='country'
           type='text'
         />
-        <ul>
-          {this.state.suggestions?.map((country) => (
-            <li
-              onClick={() => {
-                this.suggestionSelected(country.name);
-              }}
-            >
-              {country.name}
-            </li>
-          ))}
-        </ul>
+        <ul>{this.createSuggestionsListElements(this.state.suggestions)}</ul>
       </div>
     );
   }

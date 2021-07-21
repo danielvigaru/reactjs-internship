@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import FormControl from "react-bootstrap/FormControl";
 
-export const Input = (props) => {
+export const Input = ({ cssClass, input, setInput, type, placeholder }) => {
   const [inputValid, setInputValid] = useState(true);
   const [validText, setValidText] = useState(null);
 
@@ -11,25 +11,25 @@ export const Input = (props) => {
       : setValidText("Please enter 3 or more characters");
   }, [inputValid]);
 
-  const onTextChange = (e, setValueCb, setValidCb) => {
-    const text = e.target.value;
-    setValueCb(text);
+  const onTextChange = (event) => {
+    const text = event.target.value;
+    setInput(text);
 
     if (text.length >= 3 || text.length === 0) {
-      setValidCb(true);
+      setInputValid(true);
     } else {
-      setValidCb(false);
+      setInputValid(false);
     }
   };
 
   return (
     <>
       <FormControl
-        bsPrefix={props.clss}
-        placeholder={props.placeholder}
-        type={props.type}
-        value={props.input}
-        onChange={(e) => onTextChange(e, props.setInput, setInputValid)}
+        bsPrefix={cssClass}
+        placeholder={placeholder}
+        type={type}
+        value={input}
+        onChange={(event) => onTextChange(event)}
       />
       {validText}
     </>
