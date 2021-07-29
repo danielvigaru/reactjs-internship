@@ -1,0 +1,26 @@
+@import '_vars.scss';
+
+.character-box {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  cursor: pointer;
+
+  img {
+    height: 100%;
+  }
+}
+
+.text-bg {
+  width: 100%;
+}
+
+.character-box-name {
+  display: flex;
+  transform: translateY(-99%);
+  color: $orange;
+  background-color: rgba(0, 0, 0, 0.7);
+  font: 1rem $font-family;
+  padding: .2rem;
+}

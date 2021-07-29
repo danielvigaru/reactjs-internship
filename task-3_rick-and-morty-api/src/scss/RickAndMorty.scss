@@ -1,0 +1,61 @@
+@import '_vars.scss';
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+@mixin text {
+  text-align: center;
+  color: $orange;
+  font-family: $font-family;
+}
+
+h1 {
+  @include text;
+  font-size: 2rem;
+}
+
+h3 {
+  @include text;
+  font-size: 1rem;
+}
+
+.back-button {
+  @include text;
+  display: block;
+}
+
+.back-button:hover {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1100px) {
+  .grid-container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

@@ -1,0 +1,42 @@
+@import '../../scss/_vars.scss';
+
+.info-grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.character-info-panel {
+  font-family: $font-family;
+  color: $orange;
+  background-color: #393939;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.episode-info {
+  font-family: $font-family;
+  background-color: #24272D;
+  color: $orange;
+  justify-content: flex-start;
+
+  h3 {
+    text-align: left;
+    padding: 1rem;
+  }
+
+  ul {
+    margin: 1rem 1rem 1rem 0;
+  }
+}
+
+.info-white-text {
+  color: $white;
+}
+
+@media only screen and (max-width: 800px) {
+  .info-grid-container {
+    grid-template-columns: 1fr;
+  }
+}
