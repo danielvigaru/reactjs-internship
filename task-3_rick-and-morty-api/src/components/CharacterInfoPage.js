@@ -3,7 +3,7 @@ import { CharacterBox } from "./CharacterBox";
 import { LastEpisodes } from "./LastEpisodes";
 import { CharacterDetails } from "./CharacterDetails";
 import "../scss/RickAndMorty.scss";
-import "./scss/info-page.scss";
+import "../scss/components/info-page.scss";
 
 const characterObjPlaceholder = {
   name: "<name>",
